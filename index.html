@@ -262,7 +262,7 @@ async function displayVideoDetections(detections){
     //fetch("/brake", {method: "POST"});
     //fetch("/disconnect", {method: "POST"});
     if(window.sessionStorage.prcc == 'false'){
-      const formattedDateString = await getCurrentTimeInString()
+      const formattedDateString = document.querySelector("#time").innerHTML;
       ws.send("brake");
       console.log(`brake sent at: ${formattedDateString}`);
       ws.send(`brake sent at: ${formattedDateString}`);
